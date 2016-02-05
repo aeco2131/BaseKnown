@@ -1,0 +1,58 @@
+V 1.5
+
+ - New Framework version included (Beta 5.1)
+
+V 1.4
+
+HotFix for Framework
+- fixed: revive cam and dialog not spawning if you die in building
+- fixed: dead unit does not have NightVision if equipped
+- fixed: dead unit has wrong goggles
+
+V 1.3
+
+R34P3Rs Framework Beta 4.2
+- updated revive script
+- new drag function
+- stabilisazion fixed
+- some performace updates
+- new full screen nightvision with two modes
+
+- fixed; intro on dedicated servers
+
+V 1.2
+
+- Update: R34P3Rs Framework (Beta 4)
+  - fixed some bugs in the revive script
+  - fixed dead camera (using NVG on day)
+  - fixed the "Call Medic" script error
+  - updated revive dialog
+  - updated respawn dialog
+  - added more revive camera positions
+    (you can now switch to 3 cams on dead)
+  - added stamina bar (ShackTac)
+    (if you already using this MOD the bar will auto disabled)
+  - added player settings 
+	The following settings can now changes by each player by it self:
+    Unitnames, Taskicon, Icons max distance, Stamina bar, Color Correction, Stamina Script, Autoheal
+	(the options only access able if enabled by the mission-builder)
+	All settings will saved in your profile, so you dont need to setup for my other missions.
+	I will update the other missions soon as possible.
+
+- fixed: target1 (Mustafa Karmi) not walking to chopper if car destroyed
+
+V 1.1b
+
+- fixed: you get shot by the ai if you destroy empty vehicles
+- fixed: script-error in revive script
+
+V 1.1
+
+- fixed: images from hint messages only shown on Serverside
+- fixed: camera picture will be shown twice after intro is done
+- fixed: hostage behaviour and combatmode
+- fixed: press-car smoke now spawning after intro
+
+V 1.0
+
+- first public release

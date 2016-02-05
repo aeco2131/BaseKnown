@@ -1,0 +1,216 @@
+
+author = "R34P3R";
+onLoadName = "NEGOTIATION";
+loadScreen = "images\mission.jpg";
+overviewPicture = "images\mission.jpg";
+onLoadMission = "Version 1.5";
+overviewText = "Today you have two main targets. The first is Mustafa Karami, who is in possession of stolen high-risk documents. Selling these would be detrimental to national security. The second of your targets is Yuri Orlov, a known rich arms dealer with contact to terror groups.";
+briefing = 1;
+debriefing = 1;
+respawn = 0;
+respawnDelay = 45;
+respawnOnStart = 0;
+disabledAI = 0;
+aiKills = 1;
+enableDebugConsole = 0;
+saving = 1;
+
+corpseLimit = 20;
+corpseRemovalMinTime = 240;
+corpseRemovalMaxTime = 300;
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 4;
+};
+
+class Params
+{
+	class Weather
+	{
+		title = "Select start up weather:";
+		values[] = {0,1,2}; // 0 = MIN, 1 = MAX, 2 = RANDOM
+		texts[] = {"CLEAR","RAIN","RANDOM"};
+		default = 0;
+	};
+	class arsenal
+	{
+		title = "Disable Virtual Arsenal:";
+		values[] = {0,1}; // 0 = NO, 1 = YES
+		texts[] = {"NO","YES"};
+		default = 0;
+	};
+	class ambient
+	{
+		title = "Disable custom ambient sounds:";
+		values[] = {0,1}; // 0 = NO, 1 = YES
+		texts[] = {"NO","YES"};
+		default = 0;
+	};
+	class aiskill
+	{
+		title = "AI-Skill (Difficulty):";
+		values[] = {0,1,2}; // 0 = NORMAL, 1 = HARD, 2 = ORIGINAL
+		texts[] = {"NORMAL","HARD","ORIGINAL"};
+		default = 0;
+	};
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "MISSION COMPLETE !";
+		subtitle = "Well done !";
+		description = "ALL MAIN OBJECTIVES SUCCESSFUL !";
+		pictureBackground = "images\mission.jpg";
+	};
+	class End2
+	{
+		title = "MISSION FAILED";
+		subtitle = "MAIN OBJECTIVES NOT COMPLETE !";
+		pictureBackground = "images\mission.jpg";
+	};
+	class End3
+	{
+		title = "MISSION FAILED";
+		subtitle = "in memories...";
+		description = "All players died/down.";
+		pictureBackground = "images\mission_dead.jpg";
+	};
+	class End4
+	{
+		title = "MISSION FAILED";
+		subtitle = "Goatherd Killed";
+		description = "The shooting of uncertainty will not be tolerated !";
+		pictureBackground = "images\mission.jpg";
+	};
+	class End5
+	{
+		title = "MISSION FAILED";
+		subtitle = "MUSTAFA KARAMI HAS ESCAPED !";
+		pictureBackground = "images\mission.jpg";
+	};
+	class End6
+	{
+		title = "MISSION FAILED";
+		subtitle = "YURI ORLOV HAS ESCAPED !";
+		pictureBackground = "images\mission.jpg";
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	#include "R34P3R\sounds.hpp"
+	
+	//
+	// AMBIENT
+	//
+	class AmbientBirds_low
+	{
+		name = "AmbientBirds_low";
+		sound[] = {"sounds\birds_low.ogg", 0.5, 1};
+		titles[] = {0, ""};
+	};
+	class AmbientBirds_high
+	{
+		name = "AmbientBirds_high";
+		sound[] = {"sounds\birds_high.ogg", 0.5, 1};
+		titles[] = {0, ""};
+	};
+	class AmbientBirds_night
+	{
+		name = "AmbientBirds_night";
+		sound[] = {"sounds\birds_night.ogg", 0.5, 1};
+		titles[] = {0, ""};
+	};
+	class goats
+	{
+		name = "goats";
+		sound[] = {"sounds\goats.ogg", 0.7, 1};
+		titles[] = {0, ""};
+	};
+	class Parachute
+	{
+		name = "Parachute";
+		sound[] = {"sounds\parachute.ogg", 1.5, 1};
+		titles[] = {0, ""};
+	};
+	class mohawk_radio
+	{
+		name = "mohawk_radio";
+		sound[] = {"sounds\radio.ogg", 1.5, 1};
+		titles[] = {0, ""};
+	};
+	//
+	// INFORMANT
+	//
+	class informant_1
+	{
+		name = "informant_1";
+		sound[] = {"sounds\informant_1.ogg", 1.7, 1};
+		titles[] = {0, ""};
+	};
+	class informant_2
+	{
+		name = "informant_2";
+		sound[] = {"sounds\informant_2.ogg", 1.7, 1};
+		titles[] = {0, ""};
+	};
+	class informant_3
+	{
+		name = "informant_3";
+		sound[] = {"sounds\informant_3.ogg", 1.7, 1};
+		titles[] = {0, ""};
+	};
+	class informant_4
+	{
+		name = "informant_4";
+		sound[] = {"sounds\informant_4.ogg", 1.7, 1};
+		titles[] = {0, ""};
+	};
+	class informant_5
+	{
+		name = "informant_5";
+		sound[] = {"sounds\informant_5.ogg", 1.7, 1};
+		titles[] = {0, ""};
+	};
+	class informant_6
+	{
+		name = "informant_6";
+		sound[] = {"sounds\informant_6.ogg", 1.5, 1};
+		titles[] = {0, ""};
+	};	
+	//
+	// OTHER
+	//
+	class whistle
+	{
+		name = "whistle";
+		sound[] = {"sounds\whistle.ogg", 1, 1};
+		titles[] = {0, ""};
+	};
+};
+
+class CfgMusic
+{
+	tracks[]={};
+
+	class MisIntro
+	{
+		name = "";
+		sound[] = {"\music\intro.ogg", 1, 1.0};
+	};
+	class MisOutro
+	{
+		name = "";
+		sound[] = {"\music\outro.ogg", 1, 1.0};
+	};
+};
+
+#include "R34P3R\defines.hpp"
+#include "R34P3R\dialogs.hpp"
+
